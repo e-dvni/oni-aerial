@@ -183,7 +183,7 @@ export default function ServicesPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="rounded-[1.5rem] border border-white/10 bg-black/40 p-5 text-sm font-medium text-white/85"
+                  className="rounded-[1.5rem] border border-white/10 bg-black/40 p-5 text-sm font-medium text-white/85 flex items-center justify-center text-center"
                 >
                   {item}
                 </div>
