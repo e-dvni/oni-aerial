@@ -27,7 +27,7 @@ export default function ServicesPage() {
         "Cinematic flyover footage",
         "Edited listing-ready media",
         "MLS-ready resolution delivery",
-        "Porpert highlights sequencing for marketing",
+        "Property highlights sequencing for marketing",
         "Same day turnaround available",
       ],
       extras: ["30–60 second cinematic video", "Social media vertical edits"],
