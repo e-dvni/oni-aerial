@@ -58,7 +58,7 @@ export default function HomePage() {
               >
                 Request a Quote
               </a>
-              
+
             </div>
           </div>
 
@@ -105,38 +105,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="quote" className="border-b border-white/10 bg-[#090909]">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1fr_1.1fr] lg:px-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D90429]">
-              Request a Quote
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-              Tell us about your project.
-            </h2>
-            <p className="mt-4 max-w-lg text-base leading-7 text-white/70">
-              Send a few quick details and we will respond within 24 hours with next
-              steps, pricing guidance, or a custom quote.
-            </p>
-            <div className="mt-8 rounded-[1.75rem] border border-white/10 bg-black/40 p-6">
-              <p className="text-sm uppercase tracking-[0.2em] text-white/50">
-                Or call directly
-              </p>
-              <a href="tel:3037475637" className="mt-3 block text-3xl font-semibold text-white">
-                303-747-5637
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <QuoteForm
-              title="Send your project details."
-              subtitle="Tell us what you need and we’ll follow up with pricing guidance or a custom quote within 24 hours."
-            />
           </div>
         </div>
       </section>
@@ -190,6 +158,38 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" className="border-b border-white/10 bg-[#090909]">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1fr_1.1fr] lg:px-8">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D90429]">
+              Request a Quote
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
+              Tell us about your project.
+            </h2>
+            <p className="mt-4 max-w-lg text-base leading-7 text-white/70">
+              Send a few quick details and we will respond within 24 hours with next
+              steps, pricing guidance, or a custom quote.
+            </p>
+            <div className="mt-8 rounded-[1.75rem] border border-white/10 bg-black/40 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-white/50">
+                Or call directly
+              </p>
+              <a href="tel:3037475637" className="mt-3 block text-3xl font-semibold text-white">
+                303-747-5637
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <QuoteForm
+              title="Send your project details."
+              subtitle="Tell us what you need and we’ll follow up with pricing guidance or a custom quote within 24 hours."
+            />
           </div>
         </div>
       </section>
