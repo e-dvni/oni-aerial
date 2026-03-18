@@ -28,8 +28,6 @@ app.use(
   })
 );
 
-app.options("*", cors());
-
 app.use(express.json());
 
 app.get("/api/health", (_req, res) => {
