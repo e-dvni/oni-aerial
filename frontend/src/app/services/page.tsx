@@ -42,6 +42,7 @@ export default function ServicesPage() {
         "Construction progress documentation",
         "High-resolution photos and video",
         "Organized project media delivery",
+        "Progress tracking with consistent flight paths",
       ],
       extras: [
         "Monthly monitoring packages",
@@ -57,7 +58,8 @@ export default function ServicesPage() {
         "Aerial inspection of solar arrays",
         "High-resolution panel imagery",
         "Detection of debris, shading, or visible damage",
-        "Detailed aerial overview of installation",
+        "Detailed overview of installation",
+        "Identification of shading and efficiency issues",
       ],
       extras: ["Thermal imaging (when available)", "Maintenance documentation"],
     },
