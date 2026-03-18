@@ -45,7 +45,6 @@ export default function ServicesPage() {
       extras: [
         "Monthly monitoring packages",
         "Timeline progress reports",
-        "Orthomosaic mapping",
       ],
     },
     {
