@@ -109,30 +109,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D90429]">
-              Why Choose Oni Aerial
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-              Professional, compliant, and built for fast decision-making.
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-            {reasons.map((reason) => (
-              <div
-                key={reason}
-                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 text-sm leading-6 text-white/80"
-              >
-                <p className="font-medium text-white">✔ {reason}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="border-b border-white/10 bg-[#090909]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-2xl">
@@ -156,6 +132,30 @@ export default function HomePage() {
                 <p className="mt-3 text-base leading-7 text-white/70">
                   {service.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D90429]">
+              Why Choose Oni Aerial
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
+              Professional, compliant, and built for fast decision-making.
+            </h2>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+            {reasons.map((reason) => (
+              <div
+                key={reason}
+                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 text-sm leading-6 text-white/80"
+              >
+                <p className="font-medium text-white">✔ {reason}</p>
               </div>
             ))}
           </div>
