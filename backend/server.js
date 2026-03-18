@@ -8,12 +8,27 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "https://www.oniaerial.com",
+  "https://oniaerial.vercel.app",
+  "http://localhost:3000",
+  "http://localhost:3001",
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    methods: ["GET", "POST"],
+    origin(origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error(`CORS blocked for origin: ${origin}`));
+    },
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
   })
 );
+
+app.options("*", cors());
 
 app.use(express.json());
 
@@ -24,7 +39,7 @@ app.get("/api/health", (_req, res) => {
 app.use("/api/quote", quoteRoutes);
 
 app.use((err, _req, res, _next) => {
-  console.error("Server error:", err);
+  console.error("Server error:", err.message || err);
   res.status(500).json({
     success: false,
     message: "Internal server error",
@@ -32,5 +47,6 @@ app.use((err, _req, res, _next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend running on http://localhost:${PORT}`);
+  console.log(`Backend running on port ${PORT}`);
+  console.log("Allowed origins:", allowedOrigins);
 });
