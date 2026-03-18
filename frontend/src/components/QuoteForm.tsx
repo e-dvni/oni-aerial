@@ -25,6 +25,8 @@ const initialForm: FormData = {
   details: "",
 };
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 export default function QuoteForm({
   title = "Send your project details.",
   subtitle = "Share a few quick details and Oni Aerial will respond with next steps, pricing guidance, or a custom quote.",
@@ -56,7 +58,11 @@ export default function QuoteForm({
     setStatus({ type: "idle", message: "" });
 
     try {
-      const response = await fetch("http://localhost:5001/api/quote", {
+      if (!API_URL) {
+        throw new Error("API URL is not configured.");
+      }
+
+      const response = await fetch(`${API_URL}/api/quote`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +78,8 @@ export default function QuoteForm({
 
       setStatus({
         type: "success",
-        message: "Thanks — your quote request was sent successfully. We’ll respond within 24 hours.",
+        message:
+          "Thanks — your quote request was sent successfully. We’ll respond within 24 hours.",
       });
 
       setFormData(initialForm);
@@ -197,7 +204,7 @@ export default function QuoteForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-6 inline-flex rounded-full bg-[#D90429] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+          className="mt-6 inline-flex items-center justify-center rounded-full bg-[#D90429] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting ? "Sending..." : "Request a Quote"}
         </button>

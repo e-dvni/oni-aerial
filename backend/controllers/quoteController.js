@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 const path = require("path");
 
-const LOGO_PATH = path.resolve(__dirname, "../../frontend/public/logoBlack.png");
+const LOGO_PATH = path.resolve(__dirname, "../../backend/assets/logoBlack.png");
 const LOGO_CID = "oni-logo";
 
 function isValidEmail(email) {
