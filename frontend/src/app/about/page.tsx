@@ -27,6 +27,7 @@ export default function AboutPage() {
     "Real Estate Agents",
     "Property Managers",
     "Homeowners",
+    "Property Developers",
   ];
 
   return (
