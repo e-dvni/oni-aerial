@@ -114,12 +114,6 @@ export default function ContactPage() {
                 View Services & Pricing
               </Link>
 
-              <Link
-                href="/portfolio"
-                className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/5"
-              >
-                View Portfolio
-              </Link>
             </div>
           </div>
         </div>
