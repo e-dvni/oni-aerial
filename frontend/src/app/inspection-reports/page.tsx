@@ -28,6 +28,11 @@ export default function InspectionReportsPage() {
       description:
         "A structured visual summary can be provided to organize key inspection imagery into a cleaner client-facing format.",
     },
+    {
+      title: "FAA-Compliant Flight Operations",
+      description:
+        "Operations are performed in full compliance with FAA Part 107 regulations, prioritizing safe flight practices, airspace coordination, weather awareness, and site-specific risk management",
+    },
   ];
 
   const workflow = [
